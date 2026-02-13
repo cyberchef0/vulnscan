@@ -1,3 +1,5 @@
+# 🔍 VulnScanner - Web Vulnerability Scanner
+
 A multi-threaded web vulnerability scanner that detects XSS, SQL Injection, and missing security headers
 
 ## ✨ Features
@@ -16,8 +18,35 @@ A multi-threaded web vulnerability scanner that detects XSS, SQL Injection, and 
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/vulnscan.git
+git clone https://github.com/cyberchef0/vulnscan.git
 cd vulnscan
 
 # Install dependencies
 pip install requests beautifulsoup4
+
+# Run a basic scan
+python scan.py http://testphp.vulnweb.com
+
+python scan.py http://testphp.vulnweb.com
+
+#Deep Scan with HTML Report
+python scan.py http://testphp.vulnweb.com --crawl 50 --threads 10 -o report.html
+
+#Test Specific Vulnerabilities
+# Test only XSS
+python scan.py http://testphp.vulnweb.com --tests xss
+
+# Test XSS and SQLi
+python scan.py http://testphp.vulnweb.com --tests xss sqli
+
+🎯 Command Line Arguments
+Argument	Description	Default
+url	Target URL (required)	-
+--crawl	Max pages to crawl	20
+--threads	Number of threads	5
+--timeout	Request timeout (seconds)	10
+--tests	Tests to run (xss, sqli, headers, all)	all
+-o, --output	Save report (JSON/HTML)	None
+--delay	Delay between requests (seconds)	0
+--exclude	URL patterns to exclude	None
+-q, --quiet	Suppress verbose output	False
