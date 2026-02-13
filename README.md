@@ -50,3 +50,29 @@ url	Target URL (required)	-
 --delay	Delay between requests (seconds)	0
 --exclude	URL patterns to exclude	None
 -q, --quiet	Suppress verbose output	False
+
+The outout would look like this
+
+============================================================
+ SCAN COMPLETE
+============================================================
+
+📊 STATISTICS
+  • URLs scanned:    20
+  • Forms scanned:   19
+  • Parameters:      46
+  • Duration:        87.24s
+
+🔴 VULNERABILITIES
+  • CRITICAL: 25
+  • HIGH: 19
+  • MEDIUM: 7
+  • LOW: 0
+  • INFO: 0
+
+  TOTAL FINDINGS: 51
+
+⚠️  ACTION REQUIRED
+   Critical/high severity vulnerabilities detected.
+
+============================================================
