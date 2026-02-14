@@ -41,7 +41,7 @@ pip install requests beautifulsoup4
 vulnscan --help
 You should see the help menu with all available options.
 
-##Usage
+## Usage
 vulnscan http://testphp.vulnweb.com
 
 # Run a basic scan
