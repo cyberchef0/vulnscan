@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: vulnscan
+Version: 1.0.0
+Summary: Multi-threaded web vulnerability scanner detecting XSS, SQLi, and missing security headers
+Author-email: cyberchef403 <cyberchef403@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/cyberchef0/vulnscan
+Project-URL: Repository, https://github.com/cyberchef0/vulnscan.git
+Project-URL: Bug Tracker, https://github.com/cyberchef0/vulnscan/issues
+Keywords: security,scanner,xss,sqli,vulnerability,pentest
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Security
+Classifier: Topic :: Security :: Vulnerability Assessment
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests>=2.28.0
+Requires-Dist: beautifulsoup4>=4.11.0
+Dynamic: license-file

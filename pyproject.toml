@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vulnscan"
+version = "1.0.0"
+description = "Multi-threaded web vulnerability scanner detecting XSS, SQLi, and missing security headers"
+readme = "README.md"
+authors = [
+    {name = "cyberchef403", email = "cyberchef403@gmail.com"},
+]
+license = {text = "MIT"}
+classifiers = [
+    
+    "Programming Language :: Python :: 3.8",
+    "Topic :: Security",
+    "Topic :: Security :: Vulnerability Assessment",
+]
+keywords = ["security", "scanner", "xss", "sqli", "vulnerability", "pentest"]
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.28.0",
+    "beautifulsoup4>=4.11.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/cyberchef0/vulnscan"
+Repository = "https://github.com/cyberchef0/vulnscan.git"
+"Bug Tracker" = "https://github.com/cyberchef0/vulnscan/issues"
+
+[project.scripts]
+vulnscan = "vulnscan.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vulnscan*"]
+exclude = ["tests*", "scripts*"]
+
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
